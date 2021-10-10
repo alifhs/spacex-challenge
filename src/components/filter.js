@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
-import { Card } from "./components/card";
-import { Search } from "./components/search";
+// import { Card } from "./card";
+// import { Search } from "./components/search";
 
 import { useSelector, useDispatch } from "react-redux";
-import { changeFilter } from "./store/reducers/LaunchDataReducer";
+import { changeFilter } from "../store/reducers/LaunchDataReducer";
 import moment from "moment";
 
 
 
- export const Filter = ({ setFailure, setSuccess, setUpcoming, setOptionState,optionState, upcoming, failure, success })=> {
+ export const Filter = ({filters})=> {
+     const { setFailure, setSuccess, setUpcoming, setOptionState,optionState, upcoming, failure, success } = filters;
     const filterName = useSelector((state) => state.launchData.filterName);
 
     const dispatch = useDispatch();
