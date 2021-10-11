@@ -21,7 +21,7 @@ function App() {
 
   const filters = { setFailure, setSuccess, setUpcoming, setOptionState, upcoming , failure, success, optionState};
   return (
-    <div className="mx-auto pt-10 bg-gray-100 h-screen ">
+    <div className="mx-auto pt-10 bg-gray-100 min-h-screen ">
       <Search  filters = {filters} />
       <Filter filters= {filters} />
       {isLoading ? (
